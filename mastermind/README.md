@@ -1,42 +1,54 @@
-These are steps you could follow in creating a mastermind game.  There are two
-new ideas here.  First, we want to declare a constant inside a class.  Constants
-are like other variables except that they begin with a capital letter.  We
-will declare a constant called Colors inside a Board class.  You can get to that
-constant from other parts of your program, but in those parts you have to call
-it Board::Colors .
+This is an exercise for the last two days of this class. We want to do more
+programming, and we want to review some of the basic concepts we have learned.
+This exercise reviews:
 
-The second idea is that we may need to make a copy of an array.  Suppose you
-have <br/>
-array_a = [1,2,3]<br/>
-and then you do the following<br/>
-array_b = array_a<br/>
-array_b << 4<br/>
-puts array_a.to_s<br/>
-Try it in irb!  You will see that when you change array_b, you also change
-array_a, because the two are really the same array with different names.  If
-we want a separate copy, we need to use the clone method:<br/>
-array_b=array_a.clone<br/>
+* the command line
+* git
+* classes
+* hashes
+* arrays
+* variables
+* conditional statements
 
-Once you do this, you can change array_b without changing array_a.
+I don't have update access for Kristine's git repository, so we will use a new
+workspace.  
 
-You should complete ALL of the Saturday exercise, with your myctd2 workspace,
-before starting this one.
+Setup instructions
 
-Exercise
+1. Login to github.com.  Create a new repository called myctd2.  (You click on the
+icon in the upper right and go to "my repositories" and then "new").
+2. Login to c9.io.  Create a new blank workspace called myctd2.
+3. From the command line in that workspace, type
+git clone git@github.com:jrmcgarvey/ctd2<br/>
 
-From your myctd2 workspace in c9.io, do the following:<br/>
-cd ~/workspace/cdt2<br/>
-git pull origin master<br/>
-cd ..<br/>
+mkdir myctd2<br/>
+
 cp -an ctd2 myctd2<br/>
-cd ~/workspace/myctd2/ctd2/mastermind<br/>
-touch board.rb<br/>
-touch player.rb<br/>
 
-Then run ruby mmtest.rb.  It will tell you to make changes to board.rb and 
-player.rb.  All of your work should be in the<br/>
-~/workspace/myctd2/ctd2/mastermind<br/>
-directory.<br/>
+cd myctd2/ctd2<br/>
 
-By the way, if you are nearing completion of mastermind, you do not need to do
-this exercise.
+git remote add myctd2 git@github.com:<your_git_id>/myctd2<br/>
+
+git push myctd2 master<br/>
+
+touch myclass.rb<br/>
+
+Now run<br/>
+
+ruby tester.rb<br/>
+
+and follow the instructions until you are able to complete all of the tests.
+You will have to make changes to myclass.rb.
+
+Now, suppose you don't remember how to create a class or a hash or an array.
+Look it up on Google! Use search arguments like "ruby create a class".
+
+Once you have it working, type this in the command line:<br/>
+
+git add -A<br/>
+
+git commit -m "Got myclass.rb working"<br/>
+
+git push myctd2 master<br/>
+
+
